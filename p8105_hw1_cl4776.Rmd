@@ -6,6 +6,7 @@ output: github_document
 ---
 
 Problem 1
+
 Install moderndive packages.
 
 Load dataset
@@ -13,3 +14,12 @@ Load dataset
 library(moderndive)
 data("early_january_weather")
 ```
+
+Short description using R code.
+
+The `early_january_weather` dataset has `r nrow(early_january_weather)` rows and `r ncol(early_january_weather)` columns.  
+- **time_hour**: date and hour of the observation  
+- **temp** (°F): hourly temperature readings  
+- **humid** (%): relative humidity  
+- **wind_speed**, **wind_dir**, **precip**, **pressure**: additional weather information  
+The mean temperature across all observations is `r round(mean(early_january_weather$temp, na.rm = TRUE), 1)` °F.
