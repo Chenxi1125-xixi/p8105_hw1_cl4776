@@ -70,6 +70,17 @@ df = tibble(
   factor_vec = factor(rep(c("low", "medium", "high"), length.out = 10))  # factor
 )
 
+
 df
+```
+
+## Compute means using tidyverse and pull()
+```{r}
+library(tidyverse)
+
+mean(pull(df, norm_sample))          # works: numeric
+mean(pull(df, greater_than_zero))    # works: logical coerced to 0/1
+mean(pull(df, char_vec))             # error: characters cannot be averaged
+mean(pull(df, factor_vec))           # error: factors cannot be averaged directly
 ```
 
