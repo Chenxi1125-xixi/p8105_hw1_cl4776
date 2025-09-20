@@ -47,10 +47,29 @@ p_weather = ggplot(
 p_weather
 ```
 
-Patterns: Temperatures show a daily (diurnal) cycle, being higher in the day and lower at night. Observations with higher humidity often coincide with lower temperatures, suggesting an inverse relationship.
+### Patterns
+Temperatures range roughly from 28 °F to 55 °F, showing a clear daily cycle: daytime temperatures average around 38 °F–40 °F, while nighttime temperatures are closer to 34 °F. Points with higher humidity, shown in darker blue, are concentrated at cooler temperatures (generally below 35 °F), indicating that humidity tends to be higher during colder periods.
 
 # export plot
 
 ```{r}
 ggsave("temp_vs_time_humid.png", plot = p_weather, width = 8, height = 5, dpi = 300)
 ```
+# Problem 2 
+
+## create a dataframe
+```{r}
+library(tidyverse)
+
+set.seed(123) # reproducibility
+
+df = tibble(
+  norm_sample = rnorm(10),                              # numeric
+  greater_than_zero = rnorm(10) > 0,                    # logical
+  char_vec = letters[1:10],                             # character
+  factor_vec = factor(rep(c("low", "medium", "high"), length.out = 10))  # factor
+)
+
+df
+```
+
