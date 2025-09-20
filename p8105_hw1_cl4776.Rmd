@@ -83,4 +83,9 @@ mean(pull(df, greater_than_zero))    # works: logical coerced to 0/1
 mean(pull(df, char_vec))             # error: characters cannot be averaged
 mean(pull(df, factor_vec))           # error: factors cannot be averaged directly
 ```
-
+## COnvert variables to numeric
+```{r}
+as.numeric(df$greater_than_zero)
+as.numeric(df$char_vec)
+as.numeric(df$factor_vec)
+```
