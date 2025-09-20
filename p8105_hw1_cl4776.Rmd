@@ -46,6 +46,9 @@ p_weather = ggplot(
 
 p_weather
 ```
+
+Patterns: Temperatures show a daily (diurnal) cycle, being higher in the day and lower at night. Observations with higher humidity often coincide with lower temperatures, suggesting an inverse relationship.
+
 # export plot
 
 ```{r}
