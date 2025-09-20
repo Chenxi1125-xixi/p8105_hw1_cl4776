@@ -1,0 +1,15 @@
+---
+title: "p8105_hw1_cl4776"
+author: "Chenxi Liu"
+date: "2025-09-20"
+output: github_document
+---
+
+Problem 1
+Install moderndive packages.
+
+Load dataset
+```{r}
+library(moderndive)
+data("early_january_weather")
+```
