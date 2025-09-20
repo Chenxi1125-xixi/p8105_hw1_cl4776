@@ -46,3 +46,8 @@ p_weather = ggplot(
 
 p_weather
 ```
+# export plot
+
+```{r}
+ggsave("temp_vs_time_humid.png", plot = p_weather, width = 8, height = 5, dpi = 300)
+```
